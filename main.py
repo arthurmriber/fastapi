@@ -1,7 +1,12 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from routers import profanity # Importa as rotas
 
+# Instancia a aplicação FastAPI
 app = FastAPI()
 
-@app.get("/hi")
-def read_root():
-    return {"message": "hello world"}
+@app.get("/")
+def greet_json():
+    return {"Hello": "World!"}
+
+# Inclui as rotas
+app.include_router(profanity.router)
