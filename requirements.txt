@@ -1,3 +1,9 @@
 fastapi
 uvicorn
-better-profanity
+httpx
+beautifulsoup4
+google-genai
+newspaper3k
+trafilatura
+lxml_html_clean
+pillow
